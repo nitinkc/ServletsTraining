@@ -1,0 +1,220 @@
+<!-- Author : Nitin Kumar Chaurasia
+Date : Nov 24 01 2015
+Project : Done as a part of the Training given by SynergisticIT
+(Acknowledgement) Logo by : Computer Worker graphic by 
+<a href="http://www.freepik.com/">Freepik</a> from <a href="http://www.flaticon.com/">Flaticon</a> 
+is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. 
+Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a>
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- Title on top of the Web Browser-->
+<title>Mini Web App</title>
+
+<!--Icon to be displayed on the Address Bar and on top of The Web Browser-->
+<link rel="shortcut icon" href="img/logo.png">
+<link rel="icon" type="img/png" href="img/logo.png">
+
+</head>
+
+<!--Using Spy Scroll for in the body element (CSS Customised in myCustomCSS)-->
+<body>
+	<!-------------  Square Image with Brainy Quote Daily ------------->
+	<div class="content-section text-center" id="introduction">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="text-primary">Get Motivated</h1>
+
+					<!--Brainy Quote insertion (Javascript from brainy Quotes.com)-->
+					<p class="bg-info">
+						<script type="text/javascript"
+							src="http://www.brainyquote.com/link/quotebr.js"></script>
+						<small><i><a
+								href="http://www.brainyquote.com/quotes_of_the_day.html"
+								target="_blank">more Quotes</a></i></small>
+					</p>
+				</div>
+				<div class="col-md-6"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-------------------------- Various Inputs ------------------------>
+
+	<div class="content-section" id="feedback">
+		<div class="container">
+			<form class="form-horizontal">
+				<fieldset>
+					<!-- Form Name -->
+
+					<legend class="text-primary">Various Input Types </legend>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="textinput">Login
+							Name</label>
+						<div class="col-md-4">
+							<input id="textinput" name="textinput" type="text"
+								placeholder="email id" class="form-control input-md" required="">
+						</div>
+					</div>
+
+					<!-- Password input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="passwordinput">Password</label>
+						<div class="col-md-4">
+							<input id="passwordinput" name="passwordinput" type="password"
+								placeholder="Enter Password" class="form-control input-md"
+								required="">
+						</div>
+					</div>
+					
+					<!-- Date input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label"for="reserveDate">Today's Date</label>
+						<div class="col-md-4">
+						 <input 
+											name="reserveDate"
+											type="date" class="form-control" id="reserveDate"
+											placeholder="MM/DD/YYYY">
+											</div>
+					</div>
+					
+					<!-- Time input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="reserveTime">
+							Time</label>
+						<div class="col-md-4">
+							<input id="reserveTime" name="textinput" type="time"
+								placeholder="HH:MM" class="form-control input-md" required="">
+						</div>
+					</div>
+					
+
+					<!--  Multiple -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="selectmultiple">Select
+							Multiple</label>
+						<div class="col-md-4">
+							<select id="selectmultiple" name="selectmultiple"
+								class="form-control" multiple="multiple">
+								<option value="1">Option one</option>
+								<option value="2">Option two</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- File Button -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="filebutton">File
+							Button</label>
+						<div class="col-md-4">
+							<input id="filebutton" name="filebutton" class="input-file"
+								type="file">
+						</div>
+					</div>
+
+					<!-- Select Basic -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="selectbasic">Select
+							Basic</label>
+						<div class="col-md-4">
+							<select id="selectbasic" name="selectbasic" class="form-control">
+								<option value="1">Option one</option>
+								<option value="2">Option two</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- Button Drop Down -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="buttondropdown">Button
+							Drop Down</label>
+						<div class="col-md-4">
+							<div class="input-group">
+								<input id="buttondropdown" name="buttondropdown"
+									class="form-control" placeholder="placeholder" type="text">
+								<div class="input-group-btn">
+									<button type="button" class="btn btn-default dropdown-toggle"
+										data-toggle="dropdown">
+										Action <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu pull-right">
+										<li><a href="#">Option one</a></li>
+										<li><a href="#">Option two</a></li>
+										<li><a href="#">Option three</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Multiple Radios -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="radios">Multiple
+							Radios</label>
+						<div class="col-md-4">
+							<div class="radio">
+								<label for="radios-0"> <input type="radio" name="radios"
+									id="radios-0" value="1" checked="checked"> Option one
+								</label>
+							</div>
+							<div class="radio">
+								<label for="radios-1"> <input type="radio" name="radios"
+									id="radios-1" value="2"> Option two
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<!-- Button (Double) -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="button1id">Double
+							Button</label>
+						<div class="col-md-8">
+							<button id="button1id" name="button1id" class="btn btn-success">Good
+								Button</button>
+							<button id="button2id" name="button2id" class="btn btn-danger">Scary
+								Button</button>
+						</div>
+					</div>
+
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<br>
+	<!--------------------- Footer  ----------------->
+	<footer class="section section-primary" id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h1>Footer</h1>
+					<p>
+						Servlet Learning Project, <br>Project Developed as a part of
+						Training
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
