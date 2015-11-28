@@ -31,12 +31,12 @@
     <url-pattern>/thirdMethod</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>WelcomeServlet</servlet-name>
-    <servlet-class>nitin1.httpServlet.servletCollaboration.WelcomeServlet</servlet-class>
+    <servlet-name>H1RequestDispatcherForward</servlet-name>
+    <servlet-class>nitin1.httpServlet.servletCollaboration.H1RequestDispatcherForward</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>WelcomeServlet</servlet-name>
-    <url-pattern>/helloWorld</url-pattern>
+    <servlet-name>H1RequestDispatcherForward</servlet-name>
+    <url-pattern>/actionInForm</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>SelectDataServlet</servlet-name>
@@ -46,5 +46,14 @@
     <servlet-name>SelectDataServlet</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+    <description></description>
+    <display-name>wlecomeServlet</display-name>
+    <servlet-name>wlecomeServlet</servlet-name>
+    <servlet-class>nitin1.httpServlet.servletCollaboration.FwdWelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>wlecomeServlet</servlet-name>
+    <url-pattern>/wlecomeServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

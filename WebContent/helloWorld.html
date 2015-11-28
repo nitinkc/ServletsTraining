@@ -6,11 +6,26 @@
 </head>
 <body>
 	<center>
-		<h1>User Page</h1>
-		<form action="name" method="get">
-			<br>User Name : <input type="text" name="userName">
+		<h1>Example for Request Dispatchers(I) forward() method </h1>
+		<form action="actionInForm" method="get">
+			<br>User Name : <input type="text" name="nameOfInputField">
 			<input type="submit" value="GO">
 		</form>
+		<br>
+		<hr>
+		<img src="img/img_3b.png" alt="Place the Picture here" style="width:304px;height:228px;"/>
+		<hr>
+		<p>
+		<i>request.getRequestDispatcher("welcome").forward(request, response);</i>
+		<br>
+		
+		generates the request for WelcomeServlet.java
+		and forwards the ctrl to WelcomeServlet.java.
+		<br>
+		This forward() method will <b>forwards the parameters</b> of current servlet's request & response 
+		to next page (i.e.WelcomeServlet) 
+		</p>
+		
 	</center>
 </body>
 </html>
