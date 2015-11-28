@@ -66,4 +66,11 @@
     <servlet-name>H2RequestDispatcherInclude</servlet-name>
     <url-pattern>/actionInFormInc</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>IncWelcomeServlet</servlet-name>
+  <servlet-class>nitin1.httpServlet.servletCollaboration.IncWelServlet</servlet-class>
+  </servlet>
+  
+  incWelcomeServlet
 </web-app>
