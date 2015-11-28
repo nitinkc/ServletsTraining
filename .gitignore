@@ -1,0 +1,12 @@
+
+#Mac File
+.DS_Store
+
+#Eclipse related
+.classpath
+.project
+.settings/
+build/
+
+#temporary files
+*.swp
