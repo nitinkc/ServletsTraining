@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class H1RequestDispatcherForward
+ * Servlet implementation class H2RequestDispatcherInclude
  */
-public class H1RequestDispatcherForward extends HttpServlet {
+public class H2RequestDispatcherInclude extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
@@ -22,21 +22,17 @@ public class H1RequestDispatcherForward extends HttpServlet {
 		PrintWriter pr = response.getWriter();
 		pr.print("Welcome Servlet invoked");
 		
-		System.out.println("From H1RequestDispatcherForward - THE PACKET WILL BE DROPPED");
+		System.out.println("From H2RequestDispatcherInclude - THE PACKET WILL NOT BE "
+				+ "  DROPPED BUT SENT BACK TO THE CALLING SERVLET");
 		String input = request.getParameter("nameOfInputField");
 		
 		//Check on the Console if the string has been accepted
 		System.out.println("TESTING : "+input);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("fwdWelServlet");
+		RequestDispatcher rd = request.getRequestDispatcher("incWelServlet");
 		// Forwarding the current request response packet tp welcome servlet
-		rd.forward(request, response);
+		rd.include(request, response);
 		}
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
+   
 }

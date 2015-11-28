@@ -54,6 +54,16 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>wlecomeServlet</servlet-name>
-    <url-pattern>/wlecomeServlet</url-pattern>
+    <url-pattern>/fwdWelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>H2RequestDispatcherInclude</display-name>
+    <servlet-name>H2RequestDispatcherInclude</servlet-name>
+    <servlet-class>nitin1.httpServlet.servletCollaboration.H2RequestDispatcherInclude</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>H2RequestDispatcherInclude</servlet-name>
+    <url-pattern>/actionInFormInc</url-pattern>
   </servlet-mapping>
 </web-app>
