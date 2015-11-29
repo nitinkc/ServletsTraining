@@ -18,25 +18,20 @@ public class H1RequestDispatcherForward extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
+		// The user input
+		String input = request.getParameter("nameOfInputField");
 		// to Print on the Browser
 		PrintWriter pr = response.getWriter();
-		pr.print("Welcome Servlet invoked");
 		
-		System.out.println("From H1RequestDispatcherForward - THE PACKET WILL BE DROPPED");
-		String input = request.getParameter("nameOfInputField");
+		// This response will not be sent BACK. IT'S DROPPED
+		pr.print("Welcome Servlet invoked");
+		System.out.println("From H1RequestDispatcherForward - THE RESPONSE PACKET WILL BE DROPPED");
 		
 		//Check on the Console if the string has been accepted
 		System.out.println("TESTING : "+input);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("fwdWelServlet");
-		// Forwarding the current request response packet tp welcome servlet
+		// Forwarding the current request packet to welcome servlet
 		rd.forward(request, response);
-		}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
-
 }

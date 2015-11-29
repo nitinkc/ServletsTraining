@@ -21,16 +21,16 @@ public class H2RequestDispatcherInclude extends HttpServlet {
 		// to Print on the Browser
 		PrintWriter pr = response.getWriter();
 		pr.print("Welcome Servlet invoked");
-		
+		pr.print("<br>");
 		System.out.println("From H2RequestDispatcherInclude - THE PACKET WILL NOT BE "
-				+ "  DROPPED BUT SENT BACK TO THE CALLING SERVLET");
-		String input = request.getParameter("nameOfInputField");
+				+ "DROPPED BUT SENT BACK TO THE CALLING SERVLET");
+		String input = request.getParameter("nameOfInputFieldInc");
 		
 		//Check on the Console if the string has been accepted
 		System.out.println("TESTING : "+input);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("incWelServlet");
-		// Forwarding the current request response packet tp welcome servlet
+		// sending the include
 		rd.include(request, response);
 		}
 

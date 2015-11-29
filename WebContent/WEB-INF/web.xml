@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>ServletsTraining</display-name>
+  <context-param>
+    <param-name>GlobalContext</param-name>
+    <param-value>Accessible to all</param-value>
+  </context-param>
   <welcome-file-list>
     <welcome-file>home.html</welcome-file>
   </welcome-file-list>
@@ -66,11 +70,64 @@
     <servlet-name>H2RequestDispatcherInclude</servlet-name>
     <url-pattern>/actionInFormInc</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-  <servlet-name>IncWelcomeServlet</servlet-name>
-  <servlet-class>nitin1.httpServlet.servletCollaboration.IncWelServlet</servlet-class>
+    <servlet-name>IncWelcomeServlet</servlet-name>
+    <servlet-class>nitin1.httpServlet.servletCollaboration.IncWelServlet</servlet-class>
   </servlet>
-  
-  incWelcomeServlet
+  <servlet-mapping>
+    <servlet-name>IncWelcomeServlet</servlet-name>
+    <url-pattern>/incWelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>H3ServletConfigInitParam</display-name>
+    <servlet-name>H3ServletConfigInitParam</servlet-name>
+    <servlet-class>nitin1.httpServlet.servletCollaboration.H3ServletConfigInitParam</servlet-class>
+    <init-param>
+      <param-name>param1</param-name>
+      <param-value>Nitin</param-value>
+    </init-param>
+    <init-param>
+      <param-name>param2</param-name>
+      <param-value>Nidhi</param-value>
+    </init-param>
+    <init-param>
+      <param-name>param3</param-name>
+      <param-value>Nishu</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>H3ServletConfigInitParam</servlet-name>
+    <url-pattern>/config1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>H4ServletContext</display-name>
+    <servlet-name>H4ServletContext</servlet-name>
+    <servlet-class>nitin1.httpServlet.servletCollaboration.H4ServletContext</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>H4ServletContext</servlet-name>
+    <url-pattern>/context</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>attrTest</display-name>
+    <servlet-name>attrTest</servlet-name>
+    <servlet-class>nitin1.httpServlet.servletCollaboration.attributes.attrTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>attrTest</servlet-name>
+    <url-pattern>/attrTest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AttrTestCalled</display-name>
+    <servlet-name>AttrTestCalled</servlet-name>
+    <servlet-class>nitin1.httpServlet.servletCollaboration.attributes.AttrTestCalled</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AttrTestCalled</servlet-name>
+    <url-pattern>/AttrTestCalled</url-pattern>
+  </servlet-mapping>
 </web-app>
