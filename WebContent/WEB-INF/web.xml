@@ -138,7 +138,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>S1HiddenFormField</servlet-name>
-    <url-pattern>/S1HiddenFormField</url-pattern>
+    <url-pattern>/loginHidden</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -148,6 +148,46 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>S5HttpSessionServlet</servlet-name>
-    <url-pattern>/LoginHpptSession</url-pattern>
+    <url-pattern>/loginHttpSession</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>H5HttpSessionContdServlet</display-name>
+    <servlet-name>H5HttpSessionContdServlet</servlet-name>
+    <servlet-class>nitin3.httpServlets.sessionTracking.S5HttpSessionServletContd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>H5HttpSessionContdServlet</servlet-name>
+    <url-pattern>/httpContinue</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>S3URLReWritingServlet</display-name>
+    <servlet-name>S3URLReWritingServlet</servlet-name>
+    <servlet-class>nitin3.httpServlets.sessionTracking.S3URLReWritingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S3URLReWritingServlet</servlet-name>
+    <url-pattern>/loginURL</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>S3URLReWritingServletContd</display-name>
+    <servlet-name>S3URLReWritingServletContd</servlet-name>
+    <servlet-class>nitin3.httpServlets.sessionTracking.S3URLReWritingServletContd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S3URLReWritingServletContd</servlet-name>
+    <url-pattern>/S3URLReWritingServletContd</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>S1HiddenFormFieldContd</display-name>
+    <servlet-name>S1HiddenFormFieldContd</servlet-name>
+    <servlet-class>nitin3.httpServlets.sessionTracking.S1HiddenFormFieldContd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S1HiddenFormFieldContd</servlet-name>
+    <url-pattern>/hiddenPage</url-pattern>
   </servlet-mapping>
 </web-app>

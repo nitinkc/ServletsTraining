@@ -10,26 +10,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class S5HttpSessionServlet
+ * Servlet implementation class H5HttpSessionContdServlet
  */
-public class S5HttpSessionServlet extends HttpServlet {
-
+public class S5HttpSessionServletContd extends HttpServlet {
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
-		// Captured String
-		String str = request.getParameter("id");
-		// HttpSession Began
 		HttpSession session = request.getSession();
-		session.setAttribute("key",str);
-
+		String str = (String) session.getAttribute("key");
+		
 		PrintWriter out = response.getWriter();
-		response.setContentType("text/html");
-	
-		out.println("HttpSession Began With Input String = "+str);
-		out.println("<br>");
-		out.println("The Session Id is = " + request.getSession().getId());
-		out.print("<br>");
-		out.print("<a href='httpContinue'> HttpSession Continued...</a>");
+		out.println("Captured values from the Previous page ");
+		out.append(str);
 	}
+
 }
