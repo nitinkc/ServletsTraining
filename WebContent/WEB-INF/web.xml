@@ -130,4 +130,24 @@
     <servlet-name>AttrTestCalled</servlet-name>
     <url-pattern>/AttrTestCalled</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>S1HiddenFormField</display-name>
+    <servlet-name>S1HiddenFormField</servlet-name>
+    <servlet-class>nitin3.httpServlets.sessionTracking.S1HiddenFormField</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S1HiddenFormField</servlet-name>
+    <url-pattern>/S1HiddenFormField</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>S5HttpSessionServlet</display-name>
+    <servlet-name>S5HttpSessionServlet</servlet-name>
+    <servlet-class>nitin3.httpServlets.sessionTracking.S5HttpSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S5HttpSessionServlet</servlet-name>
+    <url-pattern>/LoginHpptSession</url-pattern>
+  </servlet-mapping>
 </web-app>
