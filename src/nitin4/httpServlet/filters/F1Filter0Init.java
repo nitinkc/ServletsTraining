@@ -15,9 +15,11 @@ import javax.servlet.ServletResponse;
  * Servlet Filter implementation class F1Filter0Init
  */
 public class F1Filter0Init implements Filter {
-	
+	private FilterConfig fc = null;
 	public void init(FilterConfig fConfig) throws ServletException {
-		System.out.println("Init Filter 0...");
+		System.out.println("Data Filter 1 Invoked...");
+		// To Get the Filter Config Init Param
+		fc = fConfig;
 	}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) 
@@ -29,9 +31,9 @@ public class F1Filter0Init implements Filter {
 		response.setContentType("text/html");
 		
 		out.println("<h1> Filter Invoked before Servlet </h1>");
-		
+			
 		// pass the request along the filter chain
-		//chain.doFilter(request, response);
+		chain.doFilter(request, response);
 	}
 	
 	public void destroy() {

@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -16,11 +17,11 @@ import javax.servlet.ServletResponse;
  */
 public class F1Filter1 implements Filter {
 
-	private FilterConfig filterConfig=null;
+	private FilterConfig fc=null;
 	
 	public void init(FilterConfig fConfig) throws ServletException {
 		System.out.println("Init Filter 1...");
-		filterConfig=fConfig;
+		fc=fConfig;
 	}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) 
@@ -31,16 +32,28 @@ public class F1Filter1 implements Filter {
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
 		
-		//To set in the Contaxt so others can also access.
-		String str = filterConfig.getInitParameter("filterInitParam");
+		// Get the Filter Config Inti-params
+		String val = fc.getInitParameter("filterInitParam");
+				
+		// Set the Variable to Global (ServletContext) to be accessed later	
+		ServletContext sc = request.getServletContext();
+		sc.setAttribute("servlet_context_attr", val);
 		
-		// Set the Servlet Context, Golbal variable
-		ServletContext x = request.getServletContext();
-		x.setAttribute("contextVar", str);
-		// pass the request along the filter chain
-		// The filter sequence is defined in the XML File. 
-		// Thus it will follow the sequencefrom swb.XML 
-		//chain.doFilter(request, response);
+		// Input from the user
+		String input = request.getParameter("id");
+		
+		// Check the input against the Filter init params
+		if(input.equals(val)){
+			out.println("<center><h2>Login Successful</h2></center>");
+			// Thus it will follow the sequence from web.XML
+			chain.doFilter(request, response);
+		} else{
+			out.print("<center><h2>Invalid User !!!</h2></center>");
+			out.print("<br> The Correct password is " + sc.getAttribute("servlet_context_attr"));
+			// Reload the page. 
+			RequestDispatcher rd=request.getRequestDispatcher("loginThruFilter.html");
+			rd.include(request, response);
+		}
 	}
 	
 	public void destroy() {

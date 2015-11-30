@@ -220,7 +220,7 @@
   </filter>
   <filter-mapping>
     <filter-name>F1Filter1</filter-name>
-    <url-pattern>/F1Filter1</url-pattern>
+    <url-pattern>/loginThruFilter</url-pattern>
   </filter-mapping>
   <filter>
     <display-name>F1Filter2</display-name>
@@ -229,7 +229,7 @@
   </filter>
   <filter-mapping>
     <filter-name>F1Filter2</filter-name>
-    <url-pattern>/F1Filter2</url-pattern>
+    <url-pattern>/loginThruFilter</url-pattern>
   </filter-mapping>
   <filter>
     <display-name>F1Filter0Init</display-name>
@@ -249,4 +249,17 @@
     <filter-name>F2FilterInvokingServlet</filter-name>
     <url-pattern>/filterInvokeServlet</url-pattern>
   </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>F2InvokedServlet</display-name>
+    <servlet-name>F2InvokedServlet</servlet-name>
+    <servlet-class>nitin4.httpServlet.filters.F2InvokedServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>F2InvokedServlet</servlet-name>
+    <url-pattern>/filterInvokeServlet</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>nitin5.httpServlet.listeners.L1CheckListenerSequence</listener-class>
+  </listener>
 </web-app>

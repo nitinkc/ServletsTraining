@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.tomcat.util.http.Cookies;
-
 /**
  * Servlet implementation class S7CookieServletContd
  */
@@ -25,7 +23,6 @@ public class S7CookieServletContd extends HttpServlet {
 		response.setContentType("text/html");
 		//1) fetch the all cookie
 		Cookie[] cookies = request.getCookies();
-		
 		//2) print the cookie value
 		out.print("Cookie Id  : "+ cookies[0].getName()+"<br>");
 		out.print("User id is  : "+cookies[0].getValue()+"<hr>");	
