@@ -181,7 +181,6 @@
     <url-pattern>/S3URLReWritingServletContd</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
     <display-name>S1HiddenFormFieldContd</display-name>
     <servlet-name>S1HiddenFormFieldContd</servlet-name>
     <servlet-class>nitin3.httpServlets.sessionTracking.S1HiddenFormFieldContd</servlet-class>
@@ -190,4 +189,64 @@
     <servlet-name>S1HiddenFormFieldContd</servlet-name>
     <url-pattern>/hiddenPage</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>S7CookieServlet</display-name>
+    <servlet-name>S7CookieServlet</servlet-name>
+    <servlet-class>nitin3.httpServlets.sessionTracking.S7CookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S7CookieServlet</servlet-name>
+    <url-pattern>/loginCookie</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>S7CookieServletContd</display-name>
+    <servlet-name>S7CookieServletContd</servlet-name>
+    <servlet-class>nitin3.httpServlets.sessionTracking.S7CookieServletContd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S7CookieServletContd</servlet-name>
+    <url-pattern>/sessionCookie</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>F1Filter1</display-name>
+    <filter-name>F1Filter1</filter-name>
+    <filter-class>nitin4.httpServlet.filters.F1Filter1</filter-class>
+    <init-param>
+      <param-name>filterInitParam</param-name>
+      <param-value>val_filter_param</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>F1Filter1</filter-name>
+    <url-pattern>/F1Filter1</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>F1Filter2</display-name>
+    <filter-name>F1Filter2</filter-name>
+    <filter-class>nitin4.httpServlet.filters.F1Filter2</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>F1Filter2</filter-name>
+    <url-pattern>/F1Filter2</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>F1Filter0Init</display-name>
+    <filter-name>F1Filter0Init</filter-name>
+    <filter-class>nitin4.httpServlet.filters.F1Filter0Init</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>F1Filter0Init</filter-name>
+    <url-pattern>/F1Filter0Init</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>F2FilterInvokingServlet</display-name>
+    <filter-name>F2FilterInvokingServlet</filter-name>
+    <filter-class>nitin4.httpServlet.filters.F2FilterInvokingServlet</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>F2FilterInvokingServlet</filter-name>
+    <url-pattern>/filterInvokeServlet</url-pattern>
+  </filter-mapping>
 </web-app>
