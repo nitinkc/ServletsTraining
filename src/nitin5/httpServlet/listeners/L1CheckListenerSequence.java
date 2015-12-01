@@ -1,5 +1,6 @@
 package nitin5.httpServlet.listeners;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletContextAttributeEvent;
 import javax.servlet.ServletContextAttributeListener;
 import javax.servlet.ServletContextEvent;
@@ -17,42 +18,17 @@ import javax.servlet.http.HttpSessionListener;
 
 /**
  * Application Lifecycle Listener implementation class L1CheckListenerSequence
- *
  */
-public class L1CheckListenerSequence implements ServletContextAttributeListener, HttpSessionListener, ServletContextListener, HttpSessionAttributeListener, HttpSessionActivationListener, HttpSessionBindingListener, ServletRequestListener, ServletRequestAttributeListener {
-
+public class L1CheckListenerSequence implements ServletContextListener{
 
     public void contextInitialized(ServletContextEvent arg0)  { 
-    	System.out.println("Context initialized");
+    	System.out.println("ServletContextListener Context initialized");
     	
+		ServletContext context=arg0.getServletContext();
+		context.setAttribute("Pincode", 112233);
     }
 
     public void contextDestroyed(ServletContextEvent arg0)  { 
-    	System.out.println("Context Destroted");
+    	System.out.println("ServletContextListener Context Destroted");
     }
-
-	@Override
-	public void attributeAdded(ServletRequestAttributeEvent arg0) {
-		
-	}
-
-	@Override
-	public void attributeRemoved(ServletRequestAttributeEvent arg0) {
-		
-	}
-
-	@Override
-	public void attributeReplaced(ServletRequestAttributeEvent arg0) {
-		
-	}
-
-	@Override
-	public void requestDestroyed(ServletRequestEvent arg0) {
-		
-	}
-
-	@Override
-	public void requestInitialized(ServletRequestEvent arg0) {
-		
-	}
 }
