@@ -6,7 +6,7 @@
     <param-value>Accessible to all</param-value>
   </context-param>
   <welcome-file-list>
-    <welcome-file>home.html</welcome-file>
+    <welcome-file>html/home.html</welcome-file>
   </welcome-file-list>
   <servlet>
     <servlet-name>U1ServletInterfaceServlet</servlet-name>
