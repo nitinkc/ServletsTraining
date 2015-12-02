@@ -262,4 +262,14 @@
   <listener>
     <listener-class>nitin5.httpServlet.listeners.L1CheckListenerSequence</listener-class>
   </listener>
+  <servlet>
+    <description></description>
+    <display-name>D1ServletJspDemo</display-name>
+    <servlet-name>D1ServletJspDemo</servlet-name>
+    <servlet-class>nitin6.jsp.servlets.D1ServletJspDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>D1ServletJspDemo</servlet-name>
+    <url-pattern>/io</url-pattern>
+  </servlet-mapping>
 </web-app>
