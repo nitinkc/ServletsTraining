@@ -10,3 +10,4 @@ build/
 
 #temporary files
 *.swp
+/bin/
